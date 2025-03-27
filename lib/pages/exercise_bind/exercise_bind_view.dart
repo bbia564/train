@@ -11,8 +11,8 @@ class ExerciseBindView extends GetView<PageLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.carroll.value
-              ? const CircularProgressIndicator(color: Colors.blue)
+          () => controller.paucek.value
+              ? const CircularProgressIndicator(color: Colors.green)
               : buildError(),
         ),
       ),
@@ -26,7 +26,7 @@ class ExerciseBindView extends GetView<PageLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.gctw();
+              controller.midjvq();
             },
             icon: const Icon(
               Icons.restart_alt,

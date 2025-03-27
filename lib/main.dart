@@ -1,6 +1,9 @@
 import 'package:exercise_together/db_exercise/db_exercise.dart';
+import 'package:exercise_together/pages/exercise_bind/exercise_bind_binding.dart';
+import 'package:exercise_together/pages/exercise_bind/exercise_bind_view.dart';
 import 'package:exercise_together/pages/exercise_edit/exercise_edit_binding.dart';
 import 'package:exercise_together/pages/exercise_edit/exercise_edit_view.dart';
+import 'package:exercise_together/pages/exercise_edit/exercise_text_check.dart';
 import 'package:exercise_together/pages/exercise_main/exercise_main_binding.dart';
 import 'package:exercise_together/pages/exercise_main/exercise_main_view.dart';
 import 'package:exercise_together/pages/exercise_setting/exercise_setting_binding.dart';
@@ -27,7 +30,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       getPages: Trains,
-      initialRoute: '/exercise_main',
+      initialRoute: '/',
       theme: ThemeData(
         useMaterial3: true,
         primaryColor: primaryColor,
@@ -79,8 +82,10 @@ class MyApp extends StatelessWidget {
   }
 }
 List<GetPage<dynamic>> Trains = [
+  GetPage(name: '/', page: () => const ExerciseBindView(), binding: ExerciseBindBinding()),
   GetPage(name: '/error_page', page: () => NoNetworkPage(), binding: NoNetworkBinding()),
   GetPage(name: '/exercise_main', page: () => const ExerciseMainPage(), binding: ExerciseMainBinding()),
+  GetPage(name: '/exercise_check', page: () => const ExerciseTextCheck()),
   GetPage(name: '/exercise_edit', page: () => ExerciseEditPage(), binding: ExerciseEditBinding()),
   GetPage(name: '/exerciseSetting', page: () => const ExerciseSettingPage(), binding: ExerciseSettingBinding()),
 ];

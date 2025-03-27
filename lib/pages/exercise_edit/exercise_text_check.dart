@@ -24,7 +24,7 @@ class ExerciseTextCheck extends GetView<PageLogic>{
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.xjhqnvbl.value)),
+              url: WebUri.uri(Uri.parse(controller.bxajurkp.value)),
             ),
             onWebViewCreated: (c) {
               controller.webViewController = c;
